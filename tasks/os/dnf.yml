@@ -1,0 +1,30 @@
+---
+# dnf related tasks
+
+- name: CentOS 8 related tasks
+  block:
+    - name: add epel repo centos
+      yum:
+        name: epel-release
+        state: present
+
+    - name: install needed centos packages
+      yum:
+        name:
+          - ghostscript
+        state: latest
+        enablerepo: epel
+
+    - name: install needed centos8 packages
+      yum:
+        name:
+          - ghostscript
+          - GraphicsMagick
+          - policycoreutils-python-utils
+        state: latest
+        enablerepo: epel
+
+  when: ansible_distribution == 'CentOS'
+  vars:
+    ansible_python_interpreter: python2
+

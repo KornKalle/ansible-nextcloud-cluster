@@ -1,0 +1,21 @@
+galaxy_info:
+  author: Nils Berg
+  description: Installs and manages Nextcloud as a cluster setup
+  company: Helmholtz Zentrum Berlin für Materialien und Energie GmbH
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: EL
+      versions:
+        - 8
+    - name: Debian
+      versions:
+        - buster
+        - stretch
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+  galaxy_tags:
+    - system
+    - automation
